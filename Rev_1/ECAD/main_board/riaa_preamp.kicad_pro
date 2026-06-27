@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -180,7 +186,16 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.25,
+        0.3,
+        0.4,
+        0.5,
+        0.7,
+        8.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +222,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.7,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -458,7 +482,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -478,31 +502,46 @@
         "name": "CHANNEL_A",
         "pcb_color": "rgb(120, 139, 255)",
         "priority": 3,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       },
       {
         "name": "CHANNEL_B",
         "pcb_color": "rgb(216, 127, 255)",
         "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       },
       {
         "name": "GND",
         "pcb_color": "rgb(120, 120, 120)",
         "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.7,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       },
       {
         "name": "POWER",
         "pcb_color": "rgb(255, 0, 0)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       },
       {
         "name": "SUPPLY",
         "pcb_color": "rgb(255, 237, 158)",
         "priority": 4,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -520,7 +559,16 @@
         "CHANNEL_B",
         "SUPPLY"
       ],
+      "/CFLY+": [
+        "SUPPLY"
+      ],
+      "/CFLY-": [
+        "SUPPLY"
+      ],
       "/Equalizer Channel A/IN": [
+        "CHANNEL_A"
+      ],
+      "/Equalizer Channel A/INPUT_IMPEDANCE": [
         "CHANNEL_A"
       ],
       "/Equalizer Channel A/OUT": [
@@ -529,8 +577,26 @@
       "/Equalizer Channel B/IN": [
         "CHANNEL_B"
       ],
+      "/Equalizer Channel B/INPUT_IMPEDANCE": [
+        "CHANNEL_B"
+      ],
       "/Equalizer Channel B/OUT": [
         "CHANNEL_B"
+      ],
+      "/LEFT_CHANNEL_EQUALIZED": [
+        "CHANNEL_B"
+      ],
+      "/LEFT_CHANNEL_IN": [
+        "CHANNEL_B"
+      ],
+      "/RIGHT_CHANNEL_EQUALIZED": [
+        "CHANNEL_A"
+      ],
+      "/RIGHT_CHANNEL_IN": [
+        "CHANNEL_A"
+      ],
+      "/UNFILTERED_-5V": [
+        "SUPPLY"
       ],
       "GND": [
         "CHANNEL_A",
@@ -678,7 +744,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
