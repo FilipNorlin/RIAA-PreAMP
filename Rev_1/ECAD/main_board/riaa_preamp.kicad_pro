@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -48,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 1.0,
+          "corner_smoothing": 2,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.5,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +76,40 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "drill_out_of_range|184470000|104140000|9fb784b7-c761-43c3-bccd-67d14ed772ec|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|185580001|103065000|4517aa5f-9934-468e-9cfa-38fddbbde374|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|185580001|104140000|3c47aeac-b688-443b-aeb5-aec556ae81c9|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|185580001|105215000|44d775e0-07b6-42bd-b382-fdee025c844d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|186690000|104140000|52189ed1-97e0-48a1-9a7d-48f352d7ed6d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|188105001|103065000|ef8572a7-3af7-4f86-8032-90d3635dac74|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|188105001|105215000|6cddaa7e-21c7-4cf1-be6d-8ae600519fdf|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "drill_out_of_range|188105002|104140000|23b8c8ee-1727-4529-975c-75fc297da3a9|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -68,7 +119,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "ignore",
         "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
@@ -77,6 +128,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -94,6 +146,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -113,9 +166,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -235,17 +291,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -435,11 +502,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -462,6 +532,7 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
       "undefined_netclass": "error",
@@ -494,6 +565,7 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -501,18 +573,20 @@
       {
         "name": "CHANNEL_A",
         "pcb_color": "rgb(120, 139, 255)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3
       },
       {
         "name": "CHANNEL_B",
         "pcb_color": "rgb(216, 127, 255)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3
       },
@@ -522,7 +596,8 @@
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.7,
-        "via_diameter": 0.6,
+        "tuning_profile": "",
+        "via_diameter": 0.7,
         "via_drill": 0.3
       },
       {
@@ -531,32 +606,64 @@
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3
       },
       {
         "name": "SUPPLY",
-        "pcb_color": "rgb(255, 237, 158)",
-        "priority": 4,
+        "pcb_color": "rgb(255, 182, 153)",
+        "priority": 5,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.4,
+        "tuning_profile": "",
         "via_diameter": 0.6,
+        "via_drill": 0.3
+      },
+      {
+        "name": "VIRTUAL_GND",
+        "pcb_color": "rgb(180, 180, 180)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.7,
+        "tuning_profile": "",
+        "via_diameter": 0.7,
         "via_drill": 0.3
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": {
+      "+4V": [
+        "CHANNEL_A",
+        "CHANNEL_B"
+      ],
       "+5V": [
         "CHANNEL_A",
         "CHANNEL_B",
         "SUPPLY"
       ],
+      "+8V": [
+        "CHANNEL_A",
+        "CHANNEL_B"
+      ],
+      "+9V": [
+        "SUPPLY"
+      ],
       "-5V": [
         "CHANNEL_A",
         "CHANNEL_B",
+        "SUPPLY"
+      ],
+      "/CAP_MIS": [
+        "SUPPLY"
+      ],
+      "/CC1": [
+        "SUPPLY"
+      ],
+      "/CC2": [
         "SUPPLY"
       ],
       "/CFLY+": [
@@ -583,6 +690,12 @@
       "/Equalizer Channel B/OUT": [
         "CHANNEL_B"
       ],
+      "/LDO_1V5": [
+        "SUPPLY"
+      ],
+      "/LDO_3V3": [
+        "SUPPLY"
+      ],
       "/LEFT_CHANNEL_EQUALIZED": [
         "CHANNEL_B"
       ],
@@ -600,8 +713,7 @@
       ],
       "GND": [
         "CHANNEL_A",
-        "CHANNEL_B",
-        "SUPPLY"
+        "CHANNEL_B"
       ],
       "Net-(C21-Pad2)": [
         "CHANNEL_A"
@@ -617,6 +729,30 @@
       ],
       "Net-(C25-Pad2)": [
         "CHANNEL_A"
+      ],
+      "Net-(C26-Pad2)": [
+        "CHANNEL_A"
+      ],
+      "Net-(C28-Pad2)": [
+        "CHANNEL_A"
+      ],
+      "Net-(C29-Pad1)": [
+        "CHANNEL_A"
+      ],
+      "Net-(C36-Pad1)": [
+        "CHANNEL_B"
+      ],
+      "Net-(C36-Pad2)": [
+        "CHANNEL_B"
+      ],
+      "Net-(C37-Pad2)": [
+        "CHANNEL_B"
+      ],
+      "Net-(C40-Pad2)": [
+        "CHANNEL_B"
+      ],
+      "Net-(C41-Pad1)": [
+        "CHANNEL_B"
       ],
       "Net-(C41-Pad2)": [
         "CHANNEL_B"
@@ -639,6 +775,9 @@
       "Net-(C9-Pad1)": [
         "CHANNEL_B"
       ],
+      "Net-(D2-K)": [
+        "SUPPLY"
+      ],
       "Net-(J1-CC1)": [
         "SUPPLY"
       ],
@@ -651,14 +790,35 @@
       "Net-(R11-Pad1)": [
         "CHANNEL_B"
       ],
+      "Net-(R13-Pad1)": [
+        "SUPPLY"
+      ],
+      "Net-(R14-Pad1)": [
+        "SUPPLY"
+      ],
+      "Net-(R17-Pad1)": [
+        "SUPPLY"
+      ],
       "Net-(R21-Pad2)": [
         "CHANNEL_A"
       ],
       "Net-(R24-Pad2)": [
         "CHANNEL_A"
       ],
+      "Net-(R27-Pad1)": [
+        "CHANNEL_A"
+      ],
       "Net-(R30-Pad1)": [
         "CHANNEL_A"
+      ],
+      "Net-(R34-Pad2)": [
+        "CHANNEL_B"
+      ],
+      "Net-(R37-Pad2)": [
+        "CHANNEL_B"
+      ],
+      "Net-(R40-Pad1)": [
+        "CHANNEL_B"
       ],
       "Net-(R42-Pad2)": [
         "CHANNEL_B"
@@ -684,6 +844,18 @@
       "Net-(U1-OUT)": [
         "SUPPLY"
       ],
+      "Net-(U10A--)": [
+        "CHANNEL_B"
+      ],
+      "Net-(U10B-+)": [
+        "CHANNEL_B"
+      ],
+      "Net-(U2-ADCIN1)": [
+        "SUPPLY"
+      ],
+      "Net-(U2-ADCIN2)": [
+        "SUPPLY"
+      ],
       "Net-(U20A-+)": [
         "CHANNEL_A"
       ],
@@ -705,6 +877,15 @@
       "Net-(U2B--)": [
         "CHANNEL_B"
       ],
+      "Net-(U3-ADJ)": [
+        "SUPPLY"
+      ],
+      "Net-(U3-VI)": [
+        "SUPPLY"
+      ],
+      "Net-(U4-NOISE_REDUCTION)": [
+        "SUPPLY"
+      ],
       "Net-(U40A-+)": [
         "CHANNEL_B"
       ],
@@ -720,7 +901,82 @@
       "Net-(U41B--)": [
         "CHANNEL_B"
       ],
+      "Net-(U5A--)": [
+        "CHANNEL_A"
+      ],
+      "Net-(U5B--)": [
+        "CHANNEL_A"
+      ],
+      "Net-(U6A--)": [
+        "CHANNEL_A"
+      ],
+      "Net-(U6B-+)": [
+        "CHANNEL_A"
+      ],
+      "Net-(U8A--)": [
+        "CHANNEL_B"
+      ],
+      "Net-(U8B--)": [
+        "CHANNEL_B"
+      ],
+      "Net-(U9A--)": [
+        "CHANNEL_B"
+      ],
+      "Net-(U9B-+)": [
+        "CHANNEL_B"
+      ],
       "VBUS": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-DBG_ACC-Pad10)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-DRAIN-Pad15)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-DRAIN-Pad30)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-DRAIN-Pad40)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-I2Ct_SCL-Pad9)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-I2Ct_SDA-Pad8)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-PLUG_EVENT-Pad37)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-PLUG_FLIP-Pad13)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-VIN_3V3-Pad38)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-~{FAULT_IN}-Pad18)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U2-~{SINK_EN}-Pad19)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U3-NC-Pad5)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U3-NC-Pad8)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U4-NC-Pad4)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U4-NC-Pad5)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U4-NC-Pad6)": [
+        "SUPPLY"
+      ],
+      "unconnected-(U4-NC-Pad7)": [
         "SUPPLY"
       ]
     },
@@ -730,12 +986,12 @@
         "pattern": "GND"
       },
       {
-        "netclass": "POWER",
-        "pattern": "+5V"
+        "netclass": "VIRTUAL_GND",
+        "pattern": "+4V"
       },
       {
         "netclass": "POWER",
-        "pattern": "-5V"
+        "pattern": "+8V"
       }
     ]
   },
@@ -755,7 +1011,11 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
+    "bom_export_filename": "${PROJECTNAME}_boom.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -792,19 +1052,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -832,14 +1092,8 @@
         },
         {
           "group_by": false,
-          "label": "Mouser No:",
-          "name": "Mouser No:",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "MOUSER NO:",
-          "name": "MOUSER NO:",
+          "name": "Mouser No:",
           "show": false
         },
         {
@@ -919,15 +1173,22 @@
           "label": "Sim.Pins",
           "name": "Sim.Pins",
           "show": false
+        },
+        {
+          "group_by": true,
+          "label": "ID",
+          "name": "ID",
+          "show": true
         }
       ],
-      "filter_string": "",
+      "filter_string": "R",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -935,6 +1196,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
+      "hop_over_size_choice": 3,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -958,6 +1220,7 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -966,12 +1229,21 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "riaa_preamp.kicad_sch",
+        "name": "riaa_preamp",
+        "uuid": "2b990f77-15c8-4cc2-b07f-63b4e432ca20"
+      }
+    ],
+    "used_designators": "U1-20,U101-104,U201-202,U301-304,TP1-15,TP101-103,RV1,RV11,RV101,R1-55,R101-119,R201-213,R301-313,J1-5,J11-15,J101-105,H1-4,H11-14,H101-104,FB1,FB11,FB101,D1-4,D11-12,D101-102,C1-52,C101-118,C201-212,C301-312,#PWR1-77,#PWR101-137,#PWR201-214,#PWR301-314",
+    "variants": []
   },
   "sheets": [
     [
       "2b990f77-15c8-4cc2-b07f-63b4e432ca20",
-      "Root"
+      "riaa_preamp"
     ],
     [
       "0a57e039-986d-425a-8272-ad699c361eb3",
@@ -982,5 +1254,11 @@
       "Equalizer Channel B"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {},
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
+  }
 }
