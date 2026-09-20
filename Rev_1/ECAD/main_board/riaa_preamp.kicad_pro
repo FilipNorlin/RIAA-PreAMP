@@ -1000,7 +1000,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../Gerber/",
+      "plot": "../../PCB_files/main_board/Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -1052,19 +1052,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": false
+          "show": true
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": false
+          "show": true
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": false
+          "show": true
         },
         {
           "group_by": true,
@@ -1181,7 +1181,7 @@
           "show": true
         }
       ],
-      "filter_string": "R",
+      "filter_string": "t",
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
