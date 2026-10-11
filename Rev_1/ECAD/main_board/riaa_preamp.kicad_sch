@@ -7369,6 +7369,17 @@
 				)
 			)
 		)
+		(property "ID" "100"
+			(at 127 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "5"
 			(uuid "d09ceffd-7ca9-48ec-a175-cd541844ce8f")
 		)
@@ -7814,7 +7825,7 @@
 				)
 			)
 		)
-		(property "ID" ""
+		(property "ID" "101"
 			(at 137.16 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8684,6 +8695,17 @@
 			)
 		)
 		(property "Description" "Low input voltage 50mA LDO variable output voltage, SOT-23-5"
+			(at 209.55 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "102"
 			(at 209.55 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -9589,7 +9611,7 @@
 				(justify bottom)
 			)
 		)
-		(property "ID" ""
+		(property "ID" "52"
 			(at 180.34 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -10045,6 +10067,17 @@
 				)
 			)
 		)
+		(property "ID" "106"
+			(at 185.42 76.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2ea4bdf3-d92a-4099-8960-002a5269fe2d")
 		)
@@ -10115,6 +10148,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 127 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "100"
 			(at 127 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -10428,6 +10472,17 @@
 			)
 		)
 		(property "Description" "USB Power-Only 6P Type-C Receptacle connector"
+			(at 35.56 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "30"
 			(at 35.56 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -11100,6 +11155,17 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 200.66 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "106"
+			(at 200.66 76.2 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11871,6 +11937,17 @@
 				)
 			)
 		)
+		(property "ID" "98"
+			(at 100.33 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "938a96bb-eaf2-4e95-b351-b3c64c4817e1")
 		)
@@ -12451,6 +12528,17 @@
 				)
 			)
 		)
+		(property "ID" "99"
+			(at 100.33 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a3c8eaf6-b16f-41f6-b559-3d3ae58c806c")
 		)
@@ -12534,6 +12622,17 @@
 			)
 		)
 		(property "Sim.Pins" ""
+			(at 266.7 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "103"
 			(at 266.7 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12904,6 +13003,17 @@
 			)
 		)
 		(property "Sim.Pins" ""
+			(at 109.22 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "99"
 			(at 109.22 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -14559,6 +14669,17 @@
 				)
 			)
 		)
+		(property "ID" "93"
+			(at 231.14 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "55048c9a-6474-4e11-aebc-c7e80dcde44d")
 		)
@@ -14631,6 +14752,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 222.25 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "96"
 			(at 222.25 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -14904,6 +15036,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 212.09 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "100"
 			(at 212.09 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -15927,7 +16070,7 @@
 				(justify bottom)
 			)
 		)
-		(property "ID" ""
+		(property "ID" "52"
 			(at 22.86 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -16620,6 +16763,17 @@
 				)
 			)
 		)
+		(property "ID" "98"
+			(at 109.22 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "45b2cd8c-cf22-4265-b26d-3ba618f91878")
 		)
@@ -16769,6 +16923,17 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 181.61 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ID" "97"
+			(at 181.61 35.56 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17097,7 +17262,7 @@
 				(justify bottom)
 			)
 		)
-		(property "ID" ""
+		(property "ID" "52"
 			(at 22.86 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -17690,7 +17855,7 @@
 				(justify bottom)
 			)
 		)
-		(property "ID" ""
+		(property "ID" "52"
 			(at 180.34 162.56 0)
 			(hide yes)
 			(show_name no)
